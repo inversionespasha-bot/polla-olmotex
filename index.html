@@ -370,7 +370,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 <script>
 const SB_URL = 'https://keyccxoueozxihdkkusi.supabase.co';
-const SB_KEY = 'sb_publishable_eBniueIM3RJYtajVj8ZL7Q_W4tq3v3w';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtleWNjeG91ZW96eGloZGtrdXNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMzQxODEsImV4cCI6MjA5NjYxMDE4MX0.Y2eqL_uf2ee6c6aSAETZWFG-t3pb-N52C1DYUiL7cMY';
 const ADMIN_PIN = '2026olmo';
 const COLOMBIA_BONUS_PTS = 5;
 
@@ -402,10 +402,21 @@ let semanas = [];
 
 // ---- API helpers ----
 async function sbGet(table, params='') {
-  const r = await fetch(`${SB_URL}/rest/v1/${table}?${params}`, {
-    headers: {'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`}
-  });
-  return r.json();
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${params}`, {
+      headers: {'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Accept': 'application/json'}
+    });
+    if (!r.ok) {
+      const t = await r.text();
+      console.error('sbGet error', r.status, t);
+      return [];
+    }
+    const data = await r.json();
+    return Array.isArray(data) ? data : [];
+  } catch(e) {
+    console.error('sbGet exception', e);
+    return [];
+  }
 }
 async function sbPost(table, body) {
   const r = await fetch(`${SB_URL}/rest/v1/${table}`, {
