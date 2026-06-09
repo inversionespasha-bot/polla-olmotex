@@ -376,46 +376,34 @@ const COLOMBIA_BONUS_PTS = 5;
 
 // Partidos Colombia marcados
 const MATCHES = [
-  // Grupo A
-  {id:'m1',g:'A',t1:'México',t2:'Sudáfrica',date:'2026-06-11T14:00',label:'11 Jun 2pm'},
-  {id:'m2',g:'A',t1:'Corea del Sur',t2:'Rep. Checa',date:'2026-06-11T21:00',label:'11 Jun 9pm'},
-  {id:'m3',g:'A',t1:'México',t2:'Corea del Sur',date:'2026-06-17T14:00',label:'17 Jun 2pm'},
-  {id:'m4',g:'A',t1:'Sudáfrica',t2:'Rep. Checa',date:'2026-06-17T20:00',label:'17 Jun 8pm'},
-  {id:'m5',g:'A',t1:'México',t2:'Rep. Checa',date:'2026-06-22T14:00',label:'22 Jun 2pm'},
-  {id:'m6',g:'A',t1:'Sudáfrica',t2:'Corea del Sur',date:'2026-06-22T14:00',label:'22 Jun 2pm'},
-  // Grupo B
-  {id:'m7',g:'B',t1:'Canadá',t2:'Bosnia-Herzegovina',date:'2026-06-12T14:00',label:'12 Jun 2pm'},
-  {id:'m8',g:'B',t1:'Qatar',t2:'Suiza',date:'2026-06-12T20:00',label:'12 Jun 8pm'},
-  // Grupo C
-  {id:'m9',g:'C',t1:'Brasil',t2:'Marruecos',date:'2026-06-13T17:00',label:'13 Jun 5pm'},
-  {id:'m10',g:'C',t1:'Haití',t2:'Escocia',date:'2026-06-13T20:00',label:'13 Jun 8pm'},
-  // Grupo D
-  {id:'m11',g:'D',t1:'Estados Unidos',t2:'Paraguay',date:'2026-06-12T20:00',label:'12 Jun 8pm'},
-  // Grupo E
-  {id:'m12',g:'E',t1:'Alemania',t2:'Curazao',date:'2026-06-14T20:00',label:'14 Jun 8pm'},
-  {id:'m13',g:'E',t1:'Costa de Marfil',t2:'Ecuador',date:'2026-06-14T17:00',label:'14 Jun 5pm'},
-  // Grupo F
-  {id:'m14',g:'F',t1:'Países Bajos',t2:'Japón',date:'2026-06-15T20:00',label:'15 Jun 8pm'},
-  // Grupo G
-  {id:'m15',g:'G',t1:'Bélgica',t2:'Egipto',date:'2026-06-15T17:00',label:'15 Jun 5pm'},
-  // Grupo H
-  {id:'m16',g:'H',t1:'España',t2:'Cabo Verde',date:'2026-06-16T17:00',label:'16 Jun 5pm'},
-  {id:'m17',g:'H',t1:'Arabia Saudita',t2:'Uruguay',date:'2026-06-16T20:00',label:'16 Jun 8pm'},
-  // Grupo I
-  {id:'m18',g:'I',t1:'Francia',t2:'Senegal',date:'2026-06-16T14:00',label:'16 Jun 2pm'},
-  // Grupo J
-  {id:'m19',g:'J',t1:'Argentina',t2:'Argelia',date:'2026-06-18T20:00',label:'18 Jun 8pm'},
-  {id:'m20',g:'J',t1:'Austria',t2:'Jordania',date:'2026-06-18T14:00',label:'18 Jun 2pm'},
-  // Grupo K - COLOMBIA
-  {id:'m21',g:'K',t1:'Uzbekistán',t2:'Colombia',date:'2026-06-17T20:00',label:'17 Jun 8pm',colombia:true},
-  {id:'m22',g:'K',t1:'Portugal',t2:'RD Congo',date:'2026-06-17T12:00',label:'17 Jun 12pm'},
-  {id:'m23',g:'K',t1:'Colombia',t2:'RD Congo',date:'2026-06-23T20:00',label:'23 Jun 8pm',colombia:true},
-  {id:'m24',g:'K',t1:'Portugal',t2:'Uzbekistán',date:'2026-06-23T14:00',label:'23 Jun 2pm'},
-  {id:'m25',g:'K',t1:'Colombia',t2:'Portugal',date:'2026-06-27T17:30',label:'27 Jun 5:30pm',colombia:true},
-  {id:'m26',g:'K',t1:'RD Congo',t2:'Uzbekistán',date:'2026-06-27T17:30',label:'27 Jun 5:30pm'},
-  // Grupo L
-  {id:'m27',g:'L',t1:'Inglaterra',t2:'Croacia',date:'2026-06-18T17:00',label:'18 Jun 5pm'},
-  {id:'m28',g:'L',t1:'Ghana',t2:'Panamá',date:'2026-06-18T20:00',label:'18 Jun 8pm'},
+  {id:'m1', g:'A', t1:'México',          t2:'Sudáfrica',       date:'2026-06-11T14:00', label:'11 Jun 2pm'},
+  {id:'m2', g:'A', t1:'Corea del Sur',   t2:'Rep. Checa',      date:'2026-06-11T21:00', label:'11 Jun 9pm'},
+  {id:'m7', g:'B', t1:'Canadá',          t2:'Bosnia-Herzegovina',date:'2026-06-12T14:00',label:'12 Jun 2pm'},
+  {id:'m8', g:'B', t1:'Qatar',           t2:'Suiza',           date:'2026-06-12T17:00', label:'12 Jun 5pm'},
+  {id:'m11',g:'D', t1:'Estados Unidos',  t2:'Paraguay',        date:'2026-06-12T20:00', label:'12 Jun 8pm'},
+  {id:'m9', g:'C', t1:'Brasil',          t2:'Marruecos',       date:'2026-06-13T17:00', label:'13 Jun 5pm'},
+  {id:'m10',g:'C', t1:'Haití',           t2:'Escocia',         date:'2026-06-13T20:00', label:'13 Jun 8pm'},
+  {id:'m13',g:'E', t1:'Costa de Marfil', t2:'Ecuador',         date:'2026-06-14T17:00', label:'14 Jun 5pm'},
+  {id:'m12',g:'E', t1:'Alemania',        t2:'Curazao',         date:'2026-06-14T20:00', label:'14 Jun 8pm'},
+  {id:'m15',g:'G', t1:'Bélgica',         t2:'Egipto',          date:'2026-06-15T17:00', label:'15 Jun 5pm'},
+  {id:'m14',g:'F', t1:'Países Bajos',    t2:'Japón',           date:'2026-06-15T20:00', label:'15 Jun 8pm'},
+  {id:'m18',g:'I', t1:'Francia',         t2:'Senegal',         date:'2026-06-16T14:00', label:'16 Jun 2pm'},
+  {id:'m16',g:'H', t1:'España',          t2:'Cabo Verde',      date:'2026-06-16T17:00', label:'16 Jun 5pm'},
+  {id:'m17',g:'H', t1:'Arabia Saudita',  t2:'Uruguay',         date:'2026-06-16T20:00', label:'16 Jun 8pm'},
+  {id:'m3', g:'A', t1:'México',          t2:'Corea del Sur',   date:'2026-06-17T14:00', label:'17 Jun 2pm'},
+  {id:'m22',g:'K', t1:'Portugal',        t2:'RD Congo',        date:'2026-06-17T12:00', label:'17 Jun 12pm'},
+  {id:'m4', g:'A', t1:'Sudáfrica',       t2:'Rep. Checa',      date:'2026-06-17T17:00', label:'17 Jun 5pm'},
+  {id:'m21',g:'K', t1:'Uzbekistán',      t2:'Colombia',        date:'2026-06-17T20:00', label:'17 Jun 8pm', colombia:true},
+  {id:'m20',g:'J', t1:'Austria',         t2:'Jordania',        date:'2026-06-18T14:00', label:'18 Jun 2pm'},
+  {id:'m27',g:'L', t1:'Inglaterra',      t2:'Croacia',         date:'2026-06-18T17:00', label:'18 Jun 5pm'},
+  {id:'m19',g:'J', t1:'Argentina',       t2:'Argelia',         date:'2026-06-18T20:00', label:'18 Jun 8pm'},
+  {id:'m28',g:'L', t1:'Ghana',           t2:'Panamá',          date:'2026-06-18T20:00', label:'18 Jun 8pm'},
+  {id:'m5', g:'A', t1:'México',          t2:'Rep. Checa',      date:'2026-06-22T14:00', label:'22 Jun 2pm'},
+  {id:'m6', g:'A', t1:'Sudáfrica',       t2:'Corea del Sur',   date:'2026-06-22T14:00', label:'22 Jun 2pm'},
+  {id:'m24',g:'K', t1:'Portugal',        t2:'Uzbekistán',      date:'2026-06-23T14:00', label:'23 Jun 2pm'},
+  {id:'m23',g:'K', t1:'Colombia',        t2:'RD Congo',        date:'2026-06-23T20:00', label:'23 Jun 8pm', colombia:true},
+  {id:'m25',g:'K', t1:'Colombia',        t2:'Portugal',        date:'2026-06-27T17:30', label:'27 Jun 5:30pm', colombia:true},
+  {id:'m26',g:'K', t1:'RD Congo',        t2:'Uzbekistán',      date:'2026-06-27T17:30', label:'27 Jun 5:30pm'},
 ];
 
 const TEAMS = ['Argentina','Francia','Brasil','Inglaterra','España','Portugal','Alemania','Países Bajos','Bélgica','Uruguay','Colombia','México','Estados Unidos','Canadá','Marruecos','Japón','Croacia','Senegal','Ecuador','Suiza','Dinamarca','Polonia','Australia','Corea del Sur','Ghana','Camerún','Túnez','Serbia','Perú','Venezuela','Bolivia','Paraguay','Jamaica','Panamá','Honduras','Costa Rica','Irán','Turquía','Ucrania','Austria','Hungría','Escocia','Gales','Chile','Arabia Saudita','Qatar','El Salvador','Guatemala'];
